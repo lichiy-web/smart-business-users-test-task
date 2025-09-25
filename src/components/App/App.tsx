@@ -11,8 +11,8 @@ const UserViewPage = lazy(() => import('../../pages/UserViewPage/UserViewPage'))
 
 function App() {
   return (
-    <div className="app-container">
-      <Suspense fallback={<Loader />}>
+    <div className="appContainer">
+      <Suspense fallback={<Loader isLoading={true} />}>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
