@@ -1,7 +1,9 @@
-const NotFoundPage = () => {
+const NotFoundPage: React.FC = () => {
   return (
-    <h2>NotFoundPage</h2>
-  )
-}
+    <>
+      <h2>NotFoundPage</h2>
+    </>
+  );
+};
 
-export default NotFoundPage
+export default NotFoundPage;
