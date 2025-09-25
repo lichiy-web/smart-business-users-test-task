@@ -1,0 +1,6 @@
+.loaderContainer {
+    position: absolute;
+    --size: 50px;
+    top: calc(50% - var(--size) / 2);
+    left: calc(50% - var(--size) / 2);
+}
