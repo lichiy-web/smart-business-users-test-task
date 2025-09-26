@@ -1,0 +1,20 @@
+.logoContainer {
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+
+.logoIcon {
+    font-size: 2.2rem;
+    padding: .4rem;
+    border-radius: 8px;
+    color: var(--primary-foreground);
+    background-color: var(--primary);
+    margin-right: .5rem;
+}
+
+.logoFlow {
+    color: var(--logo-flow);
+}

@@ -1,0 +1,15 @@
+.navBarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    list-style: none;
+}

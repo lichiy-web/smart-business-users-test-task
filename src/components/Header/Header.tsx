@@ -4,11 +4,10 @@ import css from './Header.module.css';
 
 const Header: React.FC = () => {
   return (
-    <nav className={css.headerNavContainer}>
-      <h2>Header</h2>
+    <header className={css.headerContainer}>
       <Logo />
       <NavBar />
-    </nav>
+    </header>
   );
 };
 
