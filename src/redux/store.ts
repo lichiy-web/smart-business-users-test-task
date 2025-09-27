@@ -43,3 +43,5 @@ export interface RootState {
   users: UsersState;
   filters: FiltersState;
 }
+
+export type AppDispatch = typeof store.dispatch;

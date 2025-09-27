@@ -22,11 +22,12 @@ const slice = createSlice({
     builder.addCase(
       fetchUsers.fulfilled,
       (state, { payload: users }: PayloadAction<UserEntity[]>) => {
+        // console.log({ users });
         const stateUsers: StateUserEntity[] = users.map(user => {
           const compositePhone = user.phone;
           let [phone, phoneExtension] = compositePhone.split(' ');
           phone = phone.replaceAll(/\D/g, '');
-          phoneExtension = phoneExtension.replaceAll(/\D/g, '');
+          phoneExtension = phoneExtension?.replaceAll(/\D/g, '') || '';
           return { ...user, phone, phoneExtension };
         });
         state.items = stateUsers;
