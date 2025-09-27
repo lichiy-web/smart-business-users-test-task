@@ -1,4 +1,5 @@
 import UsersTable from '../../components/UsersTable/UsersTable';
+import SearchBar from '../../SearchBar/SearchBar';
 import css from './UsersPage.module.css';
 import { FaUsersBetweenLines } from 'react-icons/fa6';
 
@@ -14,6 +15,7 @@ const UsersPage: React.FC = () => {
       <p className={css.textContent}>
         Manage and search through your team members and their information.
       </p>
+      <SearchBar />
       <UsersTable />
     </div>
   );

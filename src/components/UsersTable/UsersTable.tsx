@@ -3,7 +3,7 @@ import css from './UsersTable.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUsers } from '../../redux/users/operations';
 import type { AppDispatch } from '../../redux/store';
-import { selectUsers } from '../../redux/users/selectors';
+import { selectFilteredUsers, selectUsers } from '../../redux/users/selectors';
 import UserItem from '../UserItem/UserItem';
 import UserHeaderItem from '../UserHeaderItem/UserHeaderItem';
 
@@ -16,18 +16,19 @@ const UsersTable: React.FC = () => {
     return () => abortController.abort();
   }, [dispatch]);
 
+  const filteredUsers = useSelector(selectFilteredUsers);
   const users = useSelector(selectUsers);
-  const usersPerPage = users.length;
-  console.log({ users });
+  const usersPerPage = filteredUsers.length;
+  const usersTotal = users.length;
 
   return (
     <div className={css.userTableHorizontalScrollBox}>
       <p className={css.textContent}>
-        Showing {usersPerPage} of {usersPerPage} users
+        Showing {usersPerPage} of {usersTotal} users
       </p>
       <ul className={css.usersTableContainer}>
         <UserHeaderItem />
-        {users.map(user => (
+        {filteredUsers.map(user => (
           <UserItem key={user.id} user={user} />
         ))}
       </ul>

@@ -4,10 +4,12 @@ import { fetchUsers } from './operations';
 
 export interface UsersState {
   items: StateUserEntity[];
+  filteredItems: StateUserEntity[];
 }
 
 const initialState: UsersState = {
   items: [],
+  filteredItems: [],
 };
 
 const slice = createSlice({
@@ -17,12 +19,14 @@ const slice = createSlice({
     resetUsers: () => {
       return { ...initialState };
     },
+    setFilteredUsers: (state, { payload: filteredUsers }: PayloadAction<StateUserEntity[]>) => {
+      state.filteredItems = filteredUsers;
+    },
   },
   extraReducers: builder => {
     builder.addCase(
       fetchUsers.fulfilled,
       (state, { payload: users }: PayloadAction<UserEntity[]>) => {
-        // console.log({ users });
         const stateUsers: StateUserEntity[] = users.map(user => {
           const compositePhone = user.phone;
           let [phone, phoneExtension] = compositePhone.split(' ');
@@ -32,10 +36,11 @@ const slice = createSlice({
           return { ...user, phone, phoneExtension };
         });
         state.items = stateUsers;
+        state.filteredItems = stateUsers;
       }
     );
   },
 });
 
 export const usersReducer = slice.reducer;
-export const { resetUsers } = slice.actions;
+export const { resetUsers, setFilteredUsers } = slice.actions;

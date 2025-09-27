@@ -28,8 +28,14 @@ const slice = createSlice({
     unsetError: state => {
       state.error = null;
     },
+    setSearchQuery: (
+      state,
+      { payload: newSearchQuery }: PayloadAction<AppState['usersSearchQuery']>
+    ) => {
+      state.usersSearchQuery = newSearchQuery;
+    },
   },
 });
 
-export const { enableLoader, disableLoader, setError, unsetError } = slice.actions;
+export const { enableLoader, disableLoader, setError, unsetError, setSearchQuery } = slice.actions;
 export const appReducer = slice.reducer;
