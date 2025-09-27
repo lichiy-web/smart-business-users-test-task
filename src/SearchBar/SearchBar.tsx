@@ -18,7 +18,7 @@ const SearchBar: React.FC = () => {
       <Autocomplete
         freeSolo
         options={userOptions}
-        onInputChange={(event, newInputValue) => {
+        onInputChange={(_, newInputValue) => {
           dispatch(setSearchQuery(newInputValue));
         }}
         getOptionLabel={option => (typeof option === 'string' ? option : option.name)}

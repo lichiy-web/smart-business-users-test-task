@@ -4,12 +4,14 @@ export interface AppState {
   isLoading: boolean;
   error: Error | string | null;
   usersSearchQuery: string;
+  isDarkTheme: boolean;
 }
 
 const initialState: AppState = {
   isLoading: false,
   error: null,
   usersSearchQuery: '',
+  isDarkTheme: false,
 };
 
 const slice = createSlice({
