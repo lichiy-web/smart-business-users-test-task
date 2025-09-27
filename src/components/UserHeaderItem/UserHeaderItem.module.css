@@ -1,0 +1,50 @@
+.userItemContainer {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid var(--sidebar-border);
+    border-top-color: transparent;
+    height: 3.25rem;
+    &:last-of-type {
+        border: none;
+    }
+    
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.userItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 2rem;
+    /* font-size: .75rem; */
+    color: var(--muted-foreground);
+    text-decoration: none;
+}
+
+.userItemContainer.headerRow:hover {
+    cursor: auto;
+}
+
+.userItemContainer.headerRow>.userItem {
+    color: var(--foreground);
+    font-weight: 600;
+}
+
+.name {
+    flex: 4;
+}
+
+.username {
+    flex: 3;
+}
+
+.email {
+    flex: 4;
+}
+
+.phoneContainer {
+    flex: 2;
+}

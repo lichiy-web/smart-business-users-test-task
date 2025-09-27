@@ -1,0 +1,23 @@
+.userPageContainer {
+    width: 100%;
+    color: var(--muted-foreground);
+}
+
+.usersPageHeader {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--foreground)
+}
+
+.userManagerIcon {
+    font-size: 3.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .4rem .8rem;
+    border-radius: 8px;
+
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+}

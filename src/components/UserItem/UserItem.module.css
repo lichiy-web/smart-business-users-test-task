@@ -1,0 +1,115 @@
+.userItemContainer {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid var(--sidebar-border);
+    border-top-color: transparent;
+    height: 3.25rem;
+    &:last-of-type {
+        border: none;
+    }
+    
+    &:hover {
+        cursor: pointer;
+        background-color: color-mix(in oklab, var(--muted), transparent);
+    }
+}
+
+.userItemContainer:nth-of-type(5n+2) .nameAbbr {
+    background-color: var(--chart-1);
+}
+
+.userItemContainer:nth-of-type(5n+3) .nameAbbr {
+    background-color: var(--chart-2);
+}
+
+.userItemContainer:nth-of-type(5n+4) .nameAbbr {
+    background-color: var(--chart-3);
+}
+
+.userItemContainer:nth-of-type(5n+5) .nameAbbr {
+    background-color: var(--chart-4);
+}
+
+.userItemContainer:nth-of-type(5n+6) .nameAbbr {
+    background-color: var(--chart-5);
+}
+
+.userItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 2rem;
+    /* font-size: .75rem; */
+    font-size: .875rem;
+    color: var(--muted-foreground);
+    text-decoration: none;
+}
+
+.userItemContainer.headerRow:hover {
+    cursor: auto;
+    background-color: unset;
+}
+
+.userItemContainer.headerRow>.userItem {
+    color: var(--foreground);
+    font-weight: 600;
+}
+
+.userTabCol {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: .75rem;
+    flex-wrap: nowrap;
+
+    overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+}
+
+.name {
+    flex: 4;
+    font-weight: 600;
+    color: var(--foreground);
+}
+
+.nameAbbr {
+    width: 2.2rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--muted);
+    color: var(--muted);
+    font-weight: 400 ;
+
+}
+.username {
+    flex: 3;
+}
+.userIcon {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email {
+    flex: 4;
+}
+
+.phoneContainer {
+    flex: 2;
+}
+
+.phoneExtension {
+    border-top: 1px solid var(--sidebar-border);
+    font-size: .75rem;
+}
+
+.phoneExtensionHeder {
+    color: var(--sidebar-accent-foreground);
+}

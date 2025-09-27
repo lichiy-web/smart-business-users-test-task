@@ -28,6 +28,7 @@ const slice = createSlice({
           let [phone, phoneExtension] = compositePhone.split(' ');
           phone = phone.replaceAll(/\D/g, '');
           phoneExtension = phoneExtension?.replaceAll(/\D/g, '') || '';
+          user.email = user.email.toLowerCase();
           return { ...user, phone, phoneExtension };
         });
         state.items = stateUsers;

@@ -1,0 +1,19 @@
+.userTableHorizontalScrollBox {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.usersTableContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-width: 720px;
+
+    border: 1px solid var(--sidebar-border);
+    border-radius: 12px;
+    list-style: none;
+    padding: 0;
+
+}

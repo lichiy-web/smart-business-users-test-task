@@ -3,11 +3,13 @@ import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 export interface AppState {
   isLoading: boolean;
   error: Error | string | null;
+  usersSearchQuery: string;
 }
 
 const initialState: AppState = {
   isLoading: false,
   error: null,
+  usersSearchQuery: '',
 };
 
 const slice = createSlice({
