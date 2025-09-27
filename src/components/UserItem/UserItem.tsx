@@ -1,16 +1,16 @@
-import type { UserEntity } from '../../pages/UsersPage/UsersPage';
+import type { StateUserEntity } from '../../redux/api/types';
 import css from './UserItem.module.css';
 
 export interface UserItemProps {
-  user: UserEntity;
+  user: StateUserEntity;
 }
 
 const UserItem: React.FC<UserItemProps> = ({ user }) => {
   console.log({ user });
   return (
-    <>
+    <div className={css.userItemContainer}>
       <h2>UserItem</h2>
-    </>
+    </div>
   );
 };
 
