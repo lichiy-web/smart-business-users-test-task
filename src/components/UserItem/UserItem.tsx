@@ -14,7 +14,7 @@ export interface UserItemProps {
 }
 
 const UserItem: React.FC<UserItemProps> = ({ user }) => {
-  console.log('In UserItem! =>', { user });
+  // console.log('In UserItem! =>', { user });
   const { id, name, username, email, phone, phoneExtension } = user;
   const nameAbbr = getAbbrFromName(name);
   return (

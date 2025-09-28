@@ -53,7 +53,7 @@ const SearchBar: React.FC = () => {
             return filteredOptions;
           }}
           renderInput={params => {
-            console.log({ params });
+            // console.log({ params });
             return (
               <TextField
                 {...params}

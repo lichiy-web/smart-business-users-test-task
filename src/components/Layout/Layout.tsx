@@ -4,12 +4,12 @@ import Header from '../Header/Header';
 import css from './Layout.module.css';
 import Loader from '../Loader/Loader';
 import { useSelector } from 'react-redux';
-import { selectIsLoading } from '../../redux/app/selectors';
+import { selectError, selectIsLoading } from '../../redux/app/selectors';
 
 const Layout: React.FC = () => {
-  const isError = false;
+  const isError = Boolean(useSelector(selectError));
   const isLoading = useSelector(selectIsLoading);
-  console.log('In Layout!', { isLoading });
+  // console.log('In Layout!', { isLoading });
 
   return (
     <div className={css.layoutContainer}>

@@ -12,6 +12,7 @@ import { fetchUsers } from '../../redux/users/operations';
 import { selectUsers } from '../../redux/users/selectors';
 import { selectIsLoading } from '../../redux/app/selectors';
 import Loader from '../../components/Loader/Loader';
+import { unsetError } from '../../redux/app/slice';
 
 const HomePage: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -54,7 +55,13 @@ const HomePage: React.FC = () => {
             View, search, and manage user information including names, usernames, emails, and phone
             numbers.
           </p>
-          <Link to="/users" className={clsx(css.link, css.toUsersLink)}>
+          <Link
+            to="/users"
+            onClick={() => {
+              dispatch(unsetError());
+            }}
+            className={clsx(css.link, css.toUsersLink)}
+          >
             Go to users
             <div className={css.homeIcon}>
               <FaArrowRight />

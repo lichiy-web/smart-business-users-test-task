@@ -2,7 +2,7 @@ import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 
 export interface AppState {
   isLoading: boolean;
-  error: Error | string | null;
+  error: { error: Error; message: string } | Error | string | null;
   usersSearchQuery: string;
   isDarkTheme: boolean;
 }

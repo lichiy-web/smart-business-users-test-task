@@ -12,7 +12,5 @@ export const fetchUsers = createAsyncThunk(
     appApi
       .get('/users', { signal: options.signal })
       .then(({ data }) => data)
-      .catch(error =>
-        thunkAPI.rejectWithValue({ error, message: 'Rejected during action users/fetchAll' })
-      )
+      .catch(error => thunkAPI.rejectWithValue(error?.code ?? error.message))
 );

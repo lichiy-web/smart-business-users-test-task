@@ -12,7 +12,9 @@ export const handleAsyncThunkMiddleware: Middleware = store => next => action =>
   }
 
   if (isRejected(action)) {
-    store.dispatch(setError(action.payload as AppState['error']));
+    const error = action.payload;
+    if (error === 'ERR_CANCELED') return next(action);
+    store.dispatch(setError(error as AppState['error']));
   }
 
   return next(action);
