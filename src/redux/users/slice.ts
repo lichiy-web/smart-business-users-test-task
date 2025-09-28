@@ -1,15 +1,18 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 import type { StateUserEntity, UserEntity } from '../api/types';
-import { fetchUsers } from './operations';
+import { fetchUser, fetchUsers } from './operations';
+import { normalizeUser } from '../../utils/normalizeUser';
 
 export interface UsersState {
   items: StateUserEntity[];
   filteredItems: StateUserEntity[];
+  currentUser: StateUserEntity | null;
 }
 
 const initialState: UsersState = {
   items: [],
   filteredItems: [],
+  currentUser: null,
 };
 
 const slice = createSlice({
@@ -24,21 +27,15 @@ const slice = createSlice({
     },
   },
   extraReducers: builder => {
-    builder.addCase(
-      fetchUsers.fulfilled,
-      (state, { payload: users }: PayloadAction<UserEntity[]>) => {
-        const stateUsers: StateUserEntity[] = users.map(user => {
-          const compositePhone = user.phone;
-          let [phone, phoneExtension] = compositePhone.split(' ');
-          phone = phone.replaceAll(/\D/g, '');
-          phoneExtension = phoneExtension?.replaceAll(/\D/g, '') || '';
-          user.email = user.email.toLowerCase();
-          return { ...user, phone, phoneExtension };
-        });
+    builder
+      .addCase(fetchUsers.fulfilled, (state, { payload: users }: PayloadAction<UserEntity[]>) => {
+        const stateUsers: StateUserEntity[] = users.map(user => normalizeUser(user));
         state.items = stateUsers;
         state.filteredItems = stateUsers;
-      }
-    );
+      })
+      .addCase(fetchUser.fulfilled, (state, { payload: user }: PayloadAction<UserEntity>) => {
+        state.currentUser = normalizeUser(user);
+      });
   },
 });
 
