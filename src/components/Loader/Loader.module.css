@@ -1,6 +1,8 @@
-.loaderContainer {
-    position: absolute;
-    --size: 50px;
-    top: calc(50% - var(--size) / 2);
-    left: calc(50% - var(--size) / 2);
+.loader {
+        --size: 5rem;
+            top: calc(50% - var(--size) / 2);
+            left: calc(50% - var(--size) / 2);
+    width: var(--size);
+    position: fixed;
+    z-index: 1000;
 }

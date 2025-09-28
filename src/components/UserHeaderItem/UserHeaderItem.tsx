@@ -6,7 +6,7 @@ const UserHeaderItem: React.FC = () => {
     <li className={clsx(css.userItemContainer, css.headerRow)}>
       <div className={css.userItem}>
         <div className={css.name}>Name</div>
-        <div className={css.username}>UserName</div>
+        <div className={css.username}>Username</div>
         <div className={css.email}>Email</div>
         <div className={css.phoneContainer}>Phone</div>
       </div>

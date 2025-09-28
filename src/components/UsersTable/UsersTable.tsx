@@ -6,10 +6,12 @@ import type { AppDispatch } from '../../redux/store';
 import { selectFilteredUsers, selectUsers } from '../../redux/users/selectors';
 import UserItem from '../UserItem/UserItem';
 import UserHeaderItem from '../UserHeaderItem/UserHeaderItem';
+import { resetUsers } from '../../redux/users/slice';
 
 const UsersTable: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   useEffect(() => {
+    dispatch(resetUsers());
     const abortController = new AbortController();
     dispatch(fetchUsers({ signal: abortController.signal }));
 
