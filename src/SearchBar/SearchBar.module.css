@@ -1,0 +1,47 @@
+.SearchBarContainer {
+    margin: 2rem 0;
+    background-color: var(--input-background);
+    width: 50%;
+    align-self: flex-start;
+    /* height: 2.5rem; */
+}
+
+/* .searchContainer {
+    height: 2rem;
+} */
+
+.searchIcon {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.searchAutocompleteInput {
+    height: 2.5rem;
+    border-radius: 12px !important;
+    outline: none;
+}
+
+/* Звичайний стан */
+.searchAutocompleteInput .MuiOutlinedInput-notchedOutline {
+    border-color: gray;
+}
+
+/* Hover */
+.searchAutocompleteInput:hover .MuiOutlinedInput-notchedOutline {
+    /* border-color: #1976d2; */
+    border-color: red;
+}
+
+/* Focus */
+.searchAutocompleteInput.Mui-focused  {
+    /* border-color: #ff5722; */
+    border-color: red !important;
+}
+
+/* Error */
+.searchAutocompleteInput.Mui-error .MuiOutlinedInput-notchedOutline {
+    border-color: red;
+}
