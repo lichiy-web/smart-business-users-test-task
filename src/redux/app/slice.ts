@@ -25,7 +25,7 @@ const slice = createSlice({
       state.isLoading = false;
     },
     setError: (state, { payload: error }: PayloadAction<AppState['error']>) => {
-      state.error = error;
+      state.error = error instanceof Error ? error.message : error;
     },
     unsetError: state => {
       state.error = null;

@@ -1,6 +1,5 @@
 .SearchBarContainer {
     margin: 2rem 0;
-    background-color: var(--input-background);
     width: 50%;
     align-self: flex-start;
     /* height: 2.5rem; */
@@ -17,16 +16,22 @@
     justify-content: center;
 }
 
-
 .searchAutocompleteInput {
     height: 2.5rem;
     border-radius: 12px !important;
+    background-color: var(--input-background) !important;
     outline: none;
 }
 
-/* Звичайний стан */
-.searchAutocompleteInput .MuiOutlinedInput-notchedOutline {
-    border-color: gray;
+.searchAutocompleteInput:global(.Mui-focused) {
+    border: 1px solid var(--muted-foreground) !important;
+    /* outline: 4px solid var(--ring); */
+    box-shadow: 0 0 8px var(--ring);
+}
+
+/* Normal inner state */
+.searchAutocompleteInput:global(.Mui-focused) :global(.MuiOutlinedInput-notchedOutline) {
+    border: 0;
 }
 
 /* Hover */
@@ -36,12 +41,8 @@
 }
 
 /* Focus */
-.searchAutocompleteInput.Mui-focused  {
-    /* border-color: #ff5722; */
-    border-color: red !important;
-}
+/* .searchAutocompleteInput:global(.Mui-focused)  {
+    border-color: #ff5722;
+    border: 1px solid red !important;
+} */
 
-/* Error */
-.searchAutocompleteInput.Mui-error .MuiOutlinedInput-notchedOutline {
-    border-color: red;
-}

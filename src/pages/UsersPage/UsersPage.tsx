@@ -1,5 +1,5 @@
+import SearchBar from '../../components/SearchBar/SearchBar';
 import UsersTable from '../../components/UsersTable/UsersTable';
-import SearchBar from '../../SearchBar/SearchBar';
 import css from './UsersPage.module.css';
 import { FaUsersBetweenLines } from 'react-icons/fa6';
 
