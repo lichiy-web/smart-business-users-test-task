@@ -29,8 +29,18 @@
     border: 0;
 }
 
-/* Hover */
-.searchAutocompleteInput:hover .MuiOutlinedInput-notchedOutline {
-    /* border-color: #1976d2; */
-    border-color: red;
+        /* Mobile */
+@media only screen and (width <=480px) {
+    .SearchBarContainer {
+            width: 100%;
+            align-self: center;
+        }
+}
+
+/* Tablet */
+@media only screen and (481px <=width <=1024px) {
+    .SearchBarContainer {
+        width: 80%;
+        align-self: center;
+    }
 }

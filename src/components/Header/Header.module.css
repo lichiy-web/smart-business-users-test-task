@@ -8,3 +8,16 @@
     padding-right: calc((100% - var(--content-width)) / 2);
     border-bottom: 1px solid var(--sidebar-border);    
 }
+
+@media only screen and (width <= 480px) {
+    .headerContainer {
+        padding: 1rem;
+    }
+}
+
+@media only screen and (width >= 2000px) {
+    .headerContainer {
+        padding-left: calc((100% - var(--content-max-width)) / 2);
+        padding-right: calc((100% - var(--content-max-width)) / 2);
+    }    
+}

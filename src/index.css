@@ -1,8 +1,9 @@
 :root  {
     --root-width: 100%;
     --root-min-height: 100vh; 
-    --content-max-width: 1280px;
-    --content-min-sifth: 320px;
+    --mob-max-width: 480px;
+    --tab-max-width: 1024px;
+    --content-max-width: 1200px;
     --content-width: 60%;
     --font-size: 16px;
     --background: #ffffff;
@@ -81,6 +82,28 @@ body {
 
   overflow: auto;
   scrollbar-gutter: stable;
+}
+
+/* Mobile */
+@media only screen and (width <= 480px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
+/* Tablet */
+@media only screen and (481px <= width <= 1024px) {
+  :root {
+    font-size: 14px;
+    --content-width: 90%;
+  }
+}
+
+/* Laptop */
+@media only screen and (1025px <=width <=1280px) {
+  :root {
+    --content-width: 70%;
+  }
 }
 
 #root {

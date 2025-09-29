@@ -3,11 +3,17 @@
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-
-    
+    align-items: center;    
 }
 
 .pageContainer {
     width: var(--content-width);
+    max-width: var(--content-max-width);
+}
+
+@media only screen and (width <=480px) {
+    .pageContainer {
+        padding: 1rem;
+        width: 100%;
+    }
 }
