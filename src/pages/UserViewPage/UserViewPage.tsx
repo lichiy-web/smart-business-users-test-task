@@ -13,9 +13,7 @@ import { LuMail } from 'react-icons/lu';
 import { LuGlobe } from 'react-icons/lu';
 import { LuPhone } from 'react-icons/lu';
 import { LuMapPin } from 'react-icons/lu';
-// import { LuExternalLink } from 'react-icons/lu';
 import { LuBuilding } from 'react-icons/lu';
-import { extractPhoneFrom } from '../../utils/extractPhonefrom';
 import { formatPhone } from '../../utils/formatPhone';
 
 const UserViewPage: React.FC = () => {
@@ -39,7 +37,6 @@ const UserViewPage: React.FC = () => {
   const currentUser = useSelector(selectCurrentUser);
   if (!currentUser) return null;
 
-  // console.log({ currentUser });
   const {
     name,
     username,
@@ -162,13 +159,13 @@ const UserViewPage: React.FC = () => {
             </span>
             <span className={css.btnName}>Send email</span>
           </a>
-          <a href={`tel:${extractPhoneFrom(phone)}`} className={css.contactBtn}>
+          <a href={`tel:${formatPhone(phone)}`} className={css.contactBtn}>
             <span className={css.userViewIcon}>
               <LuPhone />
             </span>
             <span className={css.btnName}>Call</span>
           </a>
-          <a href={website} className={css.contactBtn}>
+          <a href={'http://' + website} className={css.contactBtn}>
             <span className={css.userViewIcon}>
               <LuGlobe />
             </span>
