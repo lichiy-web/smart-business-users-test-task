@@ -100,7 +100,7 @@ body {
 }
 
 /* Laptop */
-@media only screen and (1025px <=width <=1280px) {
+@media only screen and (1025px <= width <=1280px) {
   :root {
     --content-width: 70%;
   }
