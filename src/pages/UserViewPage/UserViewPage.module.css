@@ -1,0 +1,181 @@
+.userViewPageContainer  {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--foreground);
+    padding-top: 2rem;
+}
+
+.userViewIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backToIcon {
+    font-size: .875rem;
+}
+
+.backToLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--foreground);
+    font-weight: 600;
+    font-size: .875rem;
+    align-self: flex-start;
+    margin-bottom: 2rem;
+}
+
+.profileContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 2rem;
+}
+
+.subsectionHeader {
+    margin: 0;
+}
+
+.profileSection {
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    padding: 1.5rem 0;
+}
+
+.personalityInfo {
+    padding-top: 0;
+    gap: 2rem;
+ }
+
+.nameAbbr {
+    width:5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--muted);
+    font-size: 1.125rem;
+    /* font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"); */
+}
+
+.nameBox {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    color: var(--muted-foreground);
+}
+
+.names {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    color: var(--foreground);
+}
+
+.name {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.username {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: .2rem .5rem;
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+.catchPhrase {
+    font-size: .875rem;
+}
+
+.detailsSection,
+.companySection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.sectionHeader {
+    margin: 0;
+    font-weight: 600;
+}
+
+.contactInfo {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));  
+    gap: 1rem; 
+}
+
+.contactItem {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: var(--muted-foreground);
+}
+
+.contactValue {
+    color: var(--foreground);
+}
+
+.contactType,
+.addressValue,
+.businessFocus {
+    font-size: .875rem;
+}
+
+.phoneExtension {
+    color: var(--muted-foreground);
+    font-size: .75rem;
+    border-top: 1px solid var(--border);
+}
+
+.phoneExtensionPrefix {
+    font-weight: 600;
+    color: var(--foreground);
+}
+
+.businessFocus {
+    background-color: var(--muted);
+    padding: 1rem 2rem;
+    border-radius: 14px;
+}
+
+.contactActions {
+    gap: 2rem;
+    border-bottom: none;
+} 
+
+.contactBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    gap: 1rem;
+    color: var(--foreground);
+    font-weight: 600;
+    border: 1px solid var(--foreground);
+    padding: .5rem 1.5rem;
+    border-radius: 10px;
+
+    &:hover {
+        color: var(--background);
+        background-color: var(--foreground);
+    }
+}
+
+
+
