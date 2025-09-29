@@ -160,19 +160,19 @@ const UserViewPage: React.FC = () => {
             <span className={css.userViewIcon}>
               <LuMail />
             </span>
-            Send email
+            <span className={css.btnName}>Send email</span>
           </a>
           <a href={`tel:${extractPhoneFrom(phone)}`} className={css.contactBtn}>
             <span className={css.userViewIcon}>
               <LuPhone />
             </span>
-            Call
+            <span className={css.btnName}>Call</span>
           </a>
           <a href={website} className={css.contactBtn}>
             <span className={css.userViewIcon}>
               <LuGlobe />
             </span>
-            Visit Website
+            <span className={css.btnName}>Visit Website</span>
           </a>
         </section>
       </div>

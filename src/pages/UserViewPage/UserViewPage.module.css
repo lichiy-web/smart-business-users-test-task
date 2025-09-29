@@ -177,5 +177,22 @@
     }
 }
 
-
+@media only screen and (width <= 768px) {
+    .contactInfo {
+        display: flex;
+        flex-direction: column;
+    }
+    .contactActions {
+        gap: .5rem;
+        justify-content: space-between;
+    }
+    .contactBtn {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        flex: 1;
+    }
+    .btnName {
+        display: none;
+    }
+}
 
