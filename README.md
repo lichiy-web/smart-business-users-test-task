@@ -1,20 +1,28 @@
+## How to install the app
+
+- `$ git clone <github.repository.path>`
+- `$ npm i`
+
+## How to use this application effectively and make the most of its features.
+
+- Search users by name, username, email, or phone
+- View detailed user information in an organized table
+- Access user actions through the menu options
+- Navigate easily between different sections
+
 ## Requirements:
-1. **Fetch All Users**:
-    * Use the endpoint GET /users from JSONPlaceholder to retrieve the list of all users.
-Documentation: [JSONPlaceholder](https://jsonplaceholder.typicode.com/guide/)
+
+1. **Fetch All Users**: \* Use the endpoint GET /users from JSONPlaceholder to retrieve the list of
+   all users. Documentation: [JSONPlaceholder](https://jsonplaceholder.typicode.com/guide/)
 2. **Display Users in a Table**:
-    * Implement a table with columns: name, username, email, and phone.
-3. **Implement Advanced Filtering**:
-    * Add search input fields for each column (name, username, email, phone).
-    * Ensure that the table dynamically filters results based on user input in these fields,
-with real-time updates.
-4. **State Management**:
-    * Use Redux to manage the application state, including user data and filter states.
-You can choose between Classic Redux or Redux Toolkit for this task.
-5. **Type Safety**:
-    * Apply TypeScript comprehensively across the entire web application to ensure
-proper typing and reduce potential runtime errors. This includes all aspects of the
-application’s functionality.
-6. **Design and Styling**:
-    * Design the table and search inputs to be user-friendly and visually appealing. The
-styling is up to you, aiming for a clean and effective user interface.
+   - Implement a table with columns: name, username, email, and phone.
+3. **Implement Advanced Filtering**: Add search input fields for each column (name, username, email,
+   phone). Ensure that the table dynamically filters results based on user input in these fields,
+   with real-time updates.
+4. **State Management**: \* Use Redux to manage the application state, including user data and
+   filter states. You can choose between Classic Redux or Redux Toolkit for this task.
+5. **Type Safety**: \* Apply TypeScript comprehensively across the entire web application to ensure
+   proper typing and reduce potential runtime errors. This includes all aspects of the application’s
+   functionality.
+6. **Design and Styling**: \* Design the table and search inputs to be user-friendly and visually
+   appealing. The styling is up to you, aiming for a clean and effective user interface.
